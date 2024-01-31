@@ -9749,6 +9749,69 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7227058, y: 1.2373054, z: 1.6367588}
   m_Center: {x: 10.368757, y: 0.6097487, z: 7.5742235}
+--- !u!1 &1361997999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361998002}
+  - component: {fileID: 1361998001}
+  - component: {fileID: 1361998000}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1361998000
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361997999}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1361998001
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361997999}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1361998002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361997999}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.17, z: 11.76}
+  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371040531
 GameObject:
   m_ObjectHideFlags: 0
@@ -12929,7 +12992,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4722619254625048836, guid: 09703817e6b7e9a4cbd2770e0445e861, type: 3}
       propertyPath: moveSpeed
-      value: 3.5
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 4774969179530909929, guid: 09703817e6b7e9a4cbd2770e0445e861, type: 3}
       propertyPath: m_LocalScale.x
@@ -15755,3 +15818,4 @@ SceneRoots:
   - {fileID: 2084991903}
   - {fileID: 1083192421}
   - {fileID: 238055991}
+  - {fileID: 1361998002}
