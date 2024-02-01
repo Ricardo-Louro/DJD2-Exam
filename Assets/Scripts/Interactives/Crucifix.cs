@@ -15,7 +15,7 @@ public class Crucifix : Interactive
     private bool                                currentStatus;
     //Reference to the animator component attached to this crucifix
     private Animator                            animator;
-    //
+    //Reference to the interactive script attached to the safe
     [SerializeField] private Interactive        safeInteractive;
 
     //Start runs on the first frame in which this script is active
@@ -54,6 +54,7 @@ public class Crucifix : Interactive
         //If the solution has been achieved
         if(CheckSolution())
         {
+            //Allow the safe to be interacted with
             safeInteractive.enabled = true;
         }
     }
