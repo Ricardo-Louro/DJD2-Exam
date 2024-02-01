@@ -43,8 +43,9 @@ public class PlayerMovement : MonoBehaviour
     {
         //Calculate a move direction vector based on the inputs and the current orientation of the player
         Vector3 moveDirection = transform.forward * verticalInput + transform.right * horizontalInput;
+        
         //Move the player according in this direction vector based on the selected movement speed without influence from the frame rate
-        charController.SimpleMove(moveDirection.normalized * moveSpeed * Time.deltaTime);
+        charController.SimpleMove(moveDirection.normalized * moveSpeed);
     }
 
     //This method is public so it can be called and allows this script to receive values from others

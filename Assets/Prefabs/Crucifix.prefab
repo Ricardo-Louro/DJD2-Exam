@@ -121,7 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requirements: []
   interactionMessages: []
+  consumesRequirements: 0
   solutionIndex: 0
+  endImage: {fileID: 0}
 --- !u!95 &2121104506752697194
 Animator:
   serializedVersion: 5
