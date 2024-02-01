@@ -47,5 +47,5 @@ MonoBehaviour:
   requirements: []
   interactionMessages: []
   consumesRequirements: 0
-  name: crucifex
+  name: crucifix
   UI_image: {fileID: 21300000, guid: 599d133f9eb440a4abbc1836aa159992, type: 3}
