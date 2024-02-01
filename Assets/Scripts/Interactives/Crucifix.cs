@@ -15,9 +15,8 @@ public class Crucifix : Interactive
     private bool                                currentStatus;
     //Reference to the animator component attached to this crucifix
     private Animator                            animator;
-
-    //TEMPORARY image to be displayed when achieving the correct solution
-    [SerializeField] private GameObject         endImage;
+    //
+    [SerializeField] private Interactive        safeInteractive;
 
     //Start runs on the first frame in which this script is active
     private void Start()
@@ -55,8 +54,7 @@ public class Crucifix : Interactive
         //If the solution has been achieved
         if(CheckSolution())
         {
-            //TEMPORARY set the end prototype image as true
-            endImage.SetActive(true);
+            safeInteractive.enabled = true;
         }
     }
 
