@@ -10,6 +10,11 @@ public class Cryptex : MonoBehaviour
     [SerializeField] private Transform letter2_transform;
     [SerializeField] private Transform letter3_transform;
     [SerializeField] private Transform letter4_transform;
+
+    [SerializeField] private InputHandler currentInputs;
+
+    private SceneSwitcher               sceneSwitcher;
+
     private bool changedValues;
 
     public IList<int> letter_value;
@@ -19,6 +24,8 @@ public class Cryptex : MonoBehaviour
         changedValues = true;
 
         letter_value = new List<int>() { 0, 0, 0, 0 };
+
+        sceneSwitcher = gameObject.GetComponent<SceneSwitcher>();
     }
     
 
@@ -32,7 +39,7 @@ public class Cryptex : MonoBehaviour
                 letter_value[2] == solutionArray[2] &&
                 letter_value[3] == solutionArray[3])
             {
-                Debug.Log("SUCESSFUL TEST");
+                EndGame();
             }
 
             changedValues = false;
@@ -42,5 +49,11 @@ public class Cryptex : MonoBehaviour
     public void FlagChanges()
     {
         changedValues = true;
+    }
+
+    private void EndGame()
+    {
+        sceneSwitcher.SwitchScene();
+
     }
 }

@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class ShadowProjection : MonoBehaviour
 {
-    [SerializeField] private ShadowPuzzleInputs shadowInputHandler;
-    [SerializeField] private ActivatePuzzle activateShadowPuzzle;
-    private Vector3 current_rotation;
-    private Vector3 solved_rotation;
+    [SerializeField] private ShadowPuzzleInputs     shadowInputHandler;
+    [SerializeField] private ActivatePuzzle         activateShadowPuzzle;
+
+    [SerializeField] private GameObject             final_letter;
+
+    private Vector3                                 current_rotation;
+    private Vector3                                 solved_rotation;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +25,13 @@ public class ShadowProjection : MonoBehaviour
 
     private void CheckSolution()
     {
-        Debug.Log(current_rotation);
         if ((current_rotation.x > solved_rotation.x - 10f && current_rotation.x < solved_rotation.x + 10f) &&
             (current_rotation.y > solved_rotation.y - 10f && current_rotation.y < solved_rotation.y + 10f) &&
             (current_rotation.z > solved_rotation.z - 10f && current_rotation.z < solved_rotation.z + 10f))
         {
-            Debug.Log("SOLVED!");
             activateShadowPuzzle.ConsumeRequirementsPub();
             Destroy(activateShadowPuzzle);
+            final_letter.SetActive(true);
             shadowInputHandler.ExitPuzzle();
             Destroy(this);
         }
