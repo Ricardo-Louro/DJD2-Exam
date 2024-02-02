@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4cfd116a39d2a3645947230b51aab849, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: da061ddec882916469068e9d4263aed4, type: 2}
+      objectReference: {fileID: 2100000, guid: 56d7690718b42ed4bafd353d422d8780, type: 2}
     - target: {fileID: 919132149155446097, guid: 4cfd116a39d2a3645947230b51aab849, type: 3}
       propertyPath: m_Name
       value: Shadow_Puzzle
