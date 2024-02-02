@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1923757975140088477}
   - component: {fileID: 3636137569002781445}
   m_Layer: 0
-  m_Name: CryptexCyllinder
+  m_Name: Cryptex_letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
