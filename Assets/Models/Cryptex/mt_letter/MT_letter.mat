@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5759389866424823703
+--- !u!114 &-215481701069781732
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mt_Letter1
+  m_Name: MT_letter
   m_Shader: {fileID: -6465566751694194690, guid: 237e8cacbb3119d4fb52137326c2f154, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -113,7 +113,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ContrastBaseColor: 1
+    - _ContrastBaseColor: 0.88
     - _ContrastSmothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
