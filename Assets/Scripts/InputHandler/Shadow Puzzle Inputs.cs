@@ -12,13 +12,13 @@ public class ShadowPuzzleInputs : InputHandler
     private InputHandler regularInput;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         regularInput = gameObject.GetComponent<GeneralInputs>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
             ExitPuzzle();
@@ -29,7 +29,7 @@ public class ShadowPuzzleInputs : InputHandler
 
     }
 
-    private void ExitPuzzle()
+    public void ExitPuzzle()
     {
         regularCamera.SetActive(true);
         puzzleCamera.SetActive(false);

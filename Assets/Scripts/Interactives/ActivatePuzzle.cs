@@ -8,10 +8,19 @@ public class ActivatePuzzle : Interactive
     [SerializeField] private GameObject newCamera;
     [SerializeField] private InputHandler chosenInputs;
 
+    public void Start()
+    {
+        interactionMessage = interactionMessages[0];
+        playerInventory = GameObject.Find("Player").GetComponent<PlayerInventory>();
+    }
+
     public override void Interact()
     {
-        ToggleCam();
-        ToggleInputHandlers();
+        if(CheckRequirements())
+        {
+            ToggleCam();
+            ToggleInputHandlers();
+        }
     }
 
     private void ToggleCam()
@@ -31,5 +40,10 @@ public class ActivatePuzzle : Interactive
             else
                 inputHandler.enabled = true;
         }
+    }
+
+    public void ConsumeRequirementsPub()
+    {
+        ConsumeRequirements();
     }
 }
