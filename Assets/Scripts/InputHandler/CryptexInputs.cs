@@ -42,26 +42,46 @@ public class CryptexInputs: InputHandler
         }
         else if(Input.GetKeyDown(KeyCode.D))
         {
-            if(index > 0)
-            {
-                index--;
-            }
-        }
-        else if(Input.GetKeyDown(KeyCode.A))
-        {
             if(index < letterRotationList.Count - 1)
             {
                 index++;
             }
         }
+        else if(Input.GetKeyDown(KeyCode.A))
+        {
+            if(index > 0)
+            {
+                index--;
+            }
+        }
         else if(Input.GetKeyDown(KeyCode.W))
         {
             letterRotationList[index].Rotate(0, 0, rotationAngle);
+            
+            if (cryptex.letter_value[index] < 26)
+            {
+                cryptex.letter_value[index] += 1;
+            }
+            else
+            {
+                cryptex.letter_value[index] = 0;
+            }
+
             cryptex.FlagChanges();
         }
         else if(Input.GetKeyDown(KeyCode.S))
         {
             letterRotationList[index].Rotate(0, 0, -rotationAngle);
+
+            if (cryptex.letter_value[index] > 0)
+            {
+                cryptex.letter_value[index] -= 1;
+            }
+            else
+            {
+                cryptex.letter_value[index] = 25;
+            }
+
             cryptex.FlagChanges();
         }
         

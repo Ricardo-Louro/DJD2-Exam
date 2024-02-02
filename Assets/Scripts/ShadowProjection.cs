@@ -31,6 +31,7 @@ public class ShadowProjection : MonoBehaviour
             activateShadowPuzzle.ConsumeRequirementsPub();
             Destroy(activateShadowPuzzle);
             shadowInputHandler.ExitPuzzle();
+            Destroy(this);
         }
     }
 }

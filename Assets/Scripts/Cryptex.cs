@@ -10,39 +10,29 @@ public class Cryptex : MonoBehaviour
     [SerializeField] private Transform letter2_transform;
     [SerializeField] private Transform letter3_transform;
     [SerializeField] private Transform letter4_transform;
-    private float[] currentValues;
     private bool changedValues;
+
+    public IList<int> letter_value;
 
     private void Start()
     {
         changedValues = true;
+
+        letter_value = new List<int>() { 0, 0, 0, 0 };
     }
     
 
     // Update is called once per frame
     private void Update()
     {
-        if(changedValues)
+        if (changedValues)
         {
-            bool failedTest = false;
-            currentValues = new float[4] {letter1_transform.rotation.z,
-                                          letter2_transform.rotation.z,
-                                          letter3_transform.rotation.z,
-                                          letter4_transform.rotation.z};
-
-            for(int index = 0; index <= 3; index++)
+            if (letter_value[0] == solutionArray[0] &&
+                letter_value[1] == solutionArray[1] &&
+                letter_value[2] == solutionArray[2] &&
+                letter_value[3] == solutionArray[3])
             {
-                float comparator = (currentValues[index] - solutionArray[index] / 360);
-
-                if(comparator % 1 != 0)
-                {
-                    failedTest = true;
-                }
-            }
-
-            if(!failedTest)
-            {
-                Debug.Log("SUCCESSFUL TEST");
+                Debug.Log("SUCESSFUL TEST");
             }
 
             changedValues = false;
