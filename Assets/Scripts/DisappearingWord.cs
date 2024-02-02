@@ -9,6 +9,9 @@ public class DisappearingWord : MonoBehaviour
     [SerializeField] private Collider           disappearCollider;
     [SerializeField] private Collider           lookCollider;
 
+    [SerializeField] private Sprite[]           wordSprites;
+    private SpriteRenderer                      sr;
+
     [SerializeField] private Interactive        clockInteractive;
 
     new private Camera                          camera;
@@ -24,6 +27,7 @@ public class DisappearingWord : MonoBehaviour
         index = 0;
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         cameraManager = camera.GetComponent<CameraManager>();
+        sr = gameObject.GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
@@ -51,6 +55,7 @@ public class DisappearingWord : MonoBehaviour
     private void Disappear()
     {
         GameObject spawn = spawnPoints[index];
+        sr.sprite = wordSprites[index];
         gameObject.transform.position = spawn.transform.position;
         gameObject.transform.rotation = spawn.transform.rotation;
 
